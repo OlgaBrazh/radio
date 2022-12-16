@@ -2,28 +2,24 @@ package org.example.radio;
 
 public class Radio {
 
-   public int currentStation;
-   public int numberOfStations=10;
+    public int currentStation;
+    public int numberOfStations = 10;
 
-   public int minStation = 0;
-   public int maxStation = numberOfStations-1;
+    public int minStation = 0;
+    public int maxStation = numberOfStations - 1;
 
     public int maxVolume = 100;
     public int minVolume = 0;
     public int currentVolume = minVolume;
 
-    public Radio () {
+    public Radio() {
 
     }
 
-    public Radio (int numberOfStations) {
+    public Radio(int numberOfStations) {
 
         this.numberOfStations = numberOfStations;
     }
-
-
-
-
 
 
     public void setCurrentVolume(int newCurrentVolume) {
@@ -58,7 +54,7 @@ public class Radio {
         if (newCurrentStation < 0) {
             return;
         }
-        if (newCurrentStation > (numberOfStations-1)) {
+        if (newCurrentStation > (numberOfStations - 1)) {
             return;
         }
         currentStation = newCurrentStation;
@@ -69,7 +65,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStation == (numberOfStations-1)) {
+        if (currentStation == (numberOfStations - 1)) {
             currentStation = 0;
         } else {
             currentStation = currentStation + 1;
@@ -79,7 +75,7 @@ public class Radio {
 
     public void prevStation() {
         if (currentStation == 0) {
-            currentStation = (numberOfStations-1);
+            currentStation = (numberOfStations - 1);
         } else {
             currentStation = currentStation - 1;
         }

@@ -8,12 +8,12 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    public void test(){
+    public void test() {
 
     }
 
     @Test
-    public void testNumberOfStations (){
+    public void testNumberOfStations() {
         Radio radio = new Radio(30);
 
         Assertions.assertEquals(30, radio.numberOfStations);
@@ -149,7 +149,7 @@ public class RadioTest {
     @Test
     public void shouldIncreaseVolumeIfVolumeBelowMaxByOne() {
         //Radio radio = new Radio();
-        radio.setCurrentVolume(radio.maxVolume-1);
+        radio.setCurrentVolume(radio.maxVolume - 1);
 
         radio.increaseVolume();
 
@@ -165,7 +165,7 @@ public class RadioTest {
 
         radio.increaseVolume();
 
-        int expected = radio.minVolume+1;
+        int expected = radio.minVolume + 1;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -189,7 +189,7 @@ public class RadioTest {
 
         radio.decreaseVolume();
 
-        int expected = radio.maxVolume-1;
+        int expected = radio.maxVolume - 1;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -197,11 +197,11 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeIfVolumeBelowMaxByOne() {
         //Radio radio = new Radio();
-        radio.setCurrentVolume(radio.maxVolume-1);
+        radio.setCurrentVolume(radio.maxVolume - 1);
 
         radio.decreaseVolume();
 
-        int expected = radio.maxVolume-2;
+        int expected = radio.maxVolume - 2;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -221,7 +221,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeIfAboveMinByOne() {
         //Radio radio = new Radio();
-        radio.setCurrentVolume(radio.minVolume+1);
+        radio.setCurrentVolume(radio.minVolume + 1);
 
         radio.decreaseVolume();
 
@@ -279,9 +279,9 @@ public class RadioTest {
     public void shouldSetStationAboveMinByOne() {
         //Radio radio = new Radio();
 
-        radio.setCurrentStation(radio.minStation+1);
+        radio.setCurrentStation(radio.minStation + 1);
 
-        int expected = radio.minStation+1;
+        int expected = radio.minStation + 1;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -301,9 +301,9 @@ public class RadioTest {
     public void shouldSetStationBelowMaxByOne() {
         //Radio radio = new Radio();
 
-        radio.setCurrentStation(radio.maxStation-1);
+        radio.setCurrentStation(radio.maxStation - 1);
 
-        int expected = radio.maxStation-1;
+        int expected = radio.maxStation - 1;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -312,7 +312,7 @@ public class RadioTest {
     public void shouldSetStationAboveMaxByOne() {
         //Radio radio = new Radio();
 
-        radio.setCurrentStation(radio.maxStation+1);
+        radio.setCurrentStation(radio.maxStation + 1);
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -323,7 +323,7 @@ public class RadioTest {
     public void shouldSetStationAboveMaxByMoreTheOne() {
         //Radio radio = new Radio();
 
-        radio.setCurrentStation(radio.maxStation+30);
+        radio.setCurrentStation(radio.maxStation + 30);
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -357,7 +357,7 @@ public class RadioTest {
     @Test
     public void shouldNextStationIfBelowMaxByOne() {
         //Radio radio = new Radio();
-        radio.setCurrentStation(radio.maxStation-1);
+        radio.setCurrentStation(radio.maxStation - 1);
 
         radio.nextStation();
 
@@ -373,7 +373,7 @@ public class RadioTest {
 
         radio.nextStation();
 
-        int expected = radio.minStation+1;
+        int expected = radio.minStation + 1;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -381,11 +381,11 @@ public class RadioTest {
     @Test
     public void shouldNextStationIfAboveMinByOne() {
         //Radio radio = new Radio();
-        radio.setCurrentStation(radio.minStation+1);
+        radio.setCurrentStation(radio.minStation + 1);
 
         radio.nextStation();
 
-        int expected = radio.minStation+2;
+        int expected = radio.minStation + 2;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -409,7 +409,7 @@ public class RadioTest {
 
         radio.prevStation();
 
-        int expected = radio.maxStation-1;
+        int expected = radio.maxStation - 1;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -429,7 +429,7 @@ public class RadioTest {
     @Test
     public void shouldPrevStationIfAboveMinByOne() {
         //Radio radio = new Radio();
-        radio.setCurrentStation(radio.minStation+1);
+        radio.setCurrentStation(radio.minStation + 1);
 
         radio.prevStation();
 
